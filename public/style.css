@@ -1,402 +1,183 @@
-/* Reset default browser styles */
+/* Reset some default browser styles */
 html {
-    line-height: 1.15;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-  
-  /* Reset margins on body */
-  body {
-    margin: 0;
-  }
-  
-  /* Ensure elements like article, aside, footer, etc., are displayed as blocks */
-  article, aside, footer, header, nav, section {
-    display: block;
-  }
-  
-  /* Adjust heading font size and margin for better readability */
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a base font size and family */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Style the college list container */
+.college-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+/* Style the header */
+header {
+  background-color: #020201; /* Background color for the header */
+  padding: 20px; /* Add some padding for spacing */
+  text-align: right; /* Center-align header content */
+}
+
+header h1 {
+  font-size: 36px; /* Font size for the header title */
+  color: #fff; /* Text color for the header title */
+}
+
+/* Style the heading */
+/* Style the heading */
+h1 {
+  font-size: 48px; /* Updated font size to 28px */
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Dark text color */
+}
+h2 {
+  font-size: 40px; /* Updated font size to 28px */
+  text-align: left;
+  margin-bottom: 20px;
+  color: #333; /* Dark text color */
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+/* Style the table header */
+thead {
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase; /* Uppercase header text */
+}
+
+thead th {
+  padding: 15px;
+  text-align: left;
+}
+
+/* Style the table body */
+tbody {
+  background-color: #f4f4f4;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+tbody tr:hover {
+  background-color: #ddd; /* Light gray background on hover */
+}
+
+/* Style table cells */
+td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  color: #333; /* Dark text color */
+}
+/* Style for the footer */
+footer {
+  background-color: #020201;
+  color: #fff;
+  padding: 30px 0;
+  text-align: left;
+}
+
+/* Style for the 'Contact Us' section */
+#contact {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left; /* Align text to the left */
+  margin-right: 50%;
+}
+
+#contact h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+
+}
+
+#contact p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+#contact ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#contact ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact ul li a:hover {
+  color: #f2f2f2; /* Change color on hover */
+}
+
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
   h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    font-size: 28px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  td, th {
+    padding: 10px;
   }
   
-  /* Style for figures and captions */
-  figcaption, figure, main {
-    display: block;
-  }
-  
-  figure {
-    margin: 1em 40px;
-  }
-  
-  /* Style for horizontal rule */
-  hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-  }
-  
-  /* Style for preformatted text */
-  pre {
-    font-family: monospace, monospace;
-    font-size: 1em;
-  }
-  
-  /* Style for links */
-  a {
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-  }
-  
-  /* Style for abbreviations */
-  abbr[title] {
-    border-bottom: none;
-    text-decoration: underline;
-    text-decoration: underline dotted;
-  }
-  
-  /* Style for bold and strong text */
-  b, strong {
-    font-weight: bolder;
-  }
-  
-  /* Style for code, keyboard, and sample text */
-  code, kbd, samp {
-    font-family: monospace, monospace;
-    font-size: 1em;
-  }
-  
-  /* Style for definition text */
-  dfn {
-    font-style: italic;
-  }
-  
-  /* Style for marked text */
-  mark {
-    background-color: #ff0;
-    color: #000;
-  }
-  
-  /* Style for small text */
-  small {
-    font-size: 80%;
-  }
-  
-  /* Style for subscript and superscript */
-  sub, sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
-  
-  sub {
-    bottom: -0.25em;
-  }
-  
-  sup {
-    top: -0.5em;
-  }
-  
-  /* Style for audio and video elements */
-  audio, video {
-    display: inline-block;
-  }
-  
-  audio:not([controls]) {
-    display: none;
-    height: 0;
-  }
-  
-  /* Style for images */
-  img {
-    border-style: none;
-  }
-  
-  /* Style for SVG elements */
-  svg:not(:root) {
-    overflow: hidden;
-  }
-  
-  /* Style for form elements */
-  button, input, optgroup, select, textarea {
-    font-family: sans-serif;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
-  }
-  
-  button, input {
-    overflow: visible;
-  }
-  
-  button, select {
-    text-transform: none;
-  }
-  
-  button, html [type="button"], [type="reset"], [type="submit"] {
-    -webkit-appearance: button;
-  }
-  
-  button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }
-  
-  button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
-  }
-  
-  fieldset {
-    padding: 0.35em 0.75em 0.625em;
-  }
-  
-  legend {
-    box-sizing: border-box;
-    color: inherit;
-    display: table;
-    max-width: 100%;
-    padding: 0;
-    white-space: normal;
-  }
-  
-  progress {
-    display: inline-block;
-    vertical-align: baseline;
-  }
-  
-  textarea {
-    overflow: auto;
-  }
-  
-  [type="checkbox"], [type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
-  }
-  
-  [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
-    height: auto;
-  }
-  
-  [type="search"] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px;
-  }
-  
-  [type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-  }
-  
-  ::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit;
-  }
-  
-  /* Style for details and summary elements */
-  details, menu {
-    display: block;
-  }
-  
-  summary {
-    display: list-item;
-  }
-  
-  /* Style for canvas and template elements */
-  canvas {
-    display: inline-block;
-  }
-  
-  template {
+  /* Hide table header on small screens */
+  thead {
     display: none;
   }
   
-  /* Style for hidden elements */
-  [hidden] {
-    display: none;
+  /* Center-align table cells on small screens */
+  td, th {
+    text-align: center;
   }
   
-  /* Your custom styles start here */
-  
-  /* Set the minimum height and center content vertically and horizontally */
-  html {
-    height: 100%;
-  }
-  
-  /* Reset fieldset styles */
-  fieldset {
-    margin: 0;
-    padding: 0;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
-    -webkit-padding-before: 0;
-    -webkit-padding-start: 0;
-    -webkit-padding-end: 0;
-    -webkit-padding-after: 0;
-    border: 0;
-  }
-  
-  /* Reset legend styles */
-  legend {
-    margin: 0;
-    padding: 0;
+  /* Add some spacing between table rows */
+  tbody tr {
+    margin-bottom: 10px;
     display: block;
-    -webkit-padding-start: 0;
-    -webkit-padding-end: 0;
-  }
-  
-  /* Apply box-sizing to all elements */
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* Custom styles for your "s01" section */
-  .s01 {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-    background: url("https://img.freepik.com/free-photo/abstract-blur-defocused-bookshelf-library_1203-9635.jpg?w=826&t=st=1691575979~exp=1691576579~hmac=35463681f9b7e6a24487c141ba3d295bbe60db9f0c960c28f35837f7b23acc03");
-    background-size: cover;
-    background-position: center center;
+    border: 1px solid #ddd;
     padding: 15px;
   }
   
-  .s01 form {
-    width: 100%;
-    max-width: 1290px;
+  /* Alternate background color for rows on small screens */
+  tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
   }
   
-  .s01 form legend {
-    font-size: 60px;
-    line-height: 1;
-    color: #000000;
-    margin-left: 2%;
+  tbody tr:nth-child(odd) {
+    background-color: #fff;
   }
-  
-  .s01 form .inner-form {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 50px 47px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
-    margin-bottom: 230px;
-  }
-  
-  .s01 form .inner-form .input-field {
-    margin-right: 30px;
-    height: 68px;
-  }
-  
-  .s01 form .inner-form .input-field input {
-    height: 100%;
-    background: #fff;
-    border-radius: .5px;
-    border: 0;
-    display: block;
-    width: 100%;
-    padding: 10px 32px;
-    font-size: 20px;
-  }
-  
-  .s01 form .inner-form .input-field input.placeholder {
-    color: #9a9a9a;
-    font-size: 20px;
-  }
-  
-  .s01 form .inner-form .input-field input:-moz-placeholder {
-    color: #9a9a9a;
-    font-size: 20px;
-  }
-  
-  .s01 form .inner-form .input-field input::-webkit-input-placeholder {
-    color: #9a9a9a;
-    font-size: 20px;
-  }
-  
-  .s01 form .inner-form .input-field input:hover,
-  .s01 form .inner-form .input-field input:focus {
-    box-shadow: rgba(0, 0, 0, 0.7);
-    outline: 0;
-  }
-  
-  .s01 form .inner-form .input-field.first-wrap {
-    flex-grow: 1;
-  }
-  
-  .s01 form .inner-form .input-field.second-wrap {
-    width: 32.77%;
-    min-width: 180px;
-  }
-  
-  .s01 form .inner-form .input-field.third-wrap {
-    width: 180px;
-    margin-right: 0;
-  }
-  
-  .s01 form .inner-form .input-field.third-wrap .btn-search {
-    height: 100%;
-    width: 100%;
-    background: #4272d7;
-    white-space: nowrap;
-    border-radius: .5px;
-    font-size: 20px;
-    color: #fff;
-    transition: all .2s ease-out, color .2s ease-out;
-    border: 0;
-    cursor: pointer;
-  }
-  
-  .s01 form .inner-form .input-field.third-wrap .btn-search:hover {
-    background: #2d62d3;
-  }
-  
-  @media screen and (max-width: 992px) {
-    .s01 form legend {
-      font-size: 50px;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    .s01 form .inner-form {
-      padding: 30px 35px;
-    }
-    .s01 form .inner-form .input-field {
-      height: 50px;
-    }
-  }
-  
-  @media screen and (max-width: 767px) {
-    .s01 form legend {
-      font-size: 40px;
-      margin-bottom: 40px;
-    }
-    .s01 form .inner-form {
-      flex-wrap: wrap;
-      padding: 20px;
-    }
-    .s01 form .inner-form .input-field {
-      margin-right: 0;
-    }
-    .s01 form .inner-form .input-field input {
-      padding: 5px 15px;
-      font-size: 16px;
-    }
-    .s01 form .inner-form .input-field.first-wrap {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    .s01 form .inner-form .input-field.second-wrap {
-      width: calc(50% - 10px);
-      min-width: auto;
-    }
-    .s01 form .inner-form .input-field.third-wrap {
-      width: calc(50% - 10px);
-    }
-    .s01 form .inner-form .input-field.third-wrap .btn-search {
-      font-size: 16px;
-    }
-  }
-  
+}
